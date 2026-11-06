@@ -18,74 +18,6 @@ The project combines mathematical analysis with quantum circuit simulation using
 - Compare product, partially entangled, and maximally entangled states.
 - Investigate how entanglement changes with the rotation parameter of a quantum circuit.
 
-## 🧮 Mathematical Background
-
-### 1. Bipartite Quantum State
-
-A general two-qubit pure state can be represented as:
-
-\[
-|\psi\rangle = a_{00}|00\rangle+a_{01}|01\rangle
-+a_{10}|10\rangle+a_{11}|11\rangle
-\]
-
-Its coefficient matrix is:
-
-\[
-A =
-\begin{bmatrix}
-a_{00} & a_{01}\\
-a_{10} & a_{11}
-\end{bmatrix}
-\]
-
-### 2. Schmidt Decomposition
-
-The coefficient matrix is decomposed using Singular Value Decomposition:
-
-\[
-A=U\Sigma V^\dagger
-\]
-
-The singular values correspond to the Schmidt coefficients.
-
-The number of non-zero Schmidt coefficients determines the **Schmidt rank**:
-
-- Schmidt rank = 1: Separable (product) state.
-- Schmidt rank greater than 1: Entangled pure state.
-
-### 3. Entanglement Entropy
-
-The entanglement of a pure bipartite state is quantified using von Neumann entropy:
-
-\[
-S(\rho_A)=-\mathrm{Tr}(\rho_A\log_2\rho_A)
-\]
-
-Equivalently, using the squared Schmidt coefficients \(p_i=\lambda_i^2\):
-
-\[
-S=-\sum_i p_i\log_2p_i
-\]
-
-For two-qubit pure states, the entropy ranges from 0 to 1 bit.
-
-## ⚛️ Quantum Circuit Implementation
-
-Three different quantum states are investigated:
-
-| State | Quantum State | Expected Entropy |
-|---|---|---:|
-| Product State | \(|00\rangle\) | 0 bits |
-| Partially Entangled State | \(\cos\theta|00\rangle+\sin\theta|11\rangle\), \(\theta=\pi/8\) | 0.6009 bits |
-| Bell State | \((|00\rangle+|11\rangle)/\sqrt{2}\) | 1 bit |
-
-The quantum circuits are constructed using:
-
-- **Product State:** No quantum gates.
-- **Partial Entanglement:** Rotation gate \(R_y(2\theta)\) followed by a CNOT gate.
-- **Bell State:** Hadamard gate followed by a CNOT gate.
-
 ## 📊 Experiments and Visualizations
 
 The project includes:
@@ -96,7 +28,7 @@ The project includes:
 4. Schmidt rank comparison.
 5. Entanglement entropy calculation.
 6. Bar graph comparing entanglement entropy across the three states.
-7. Entanglement entropy versus rotation angle \(\theta\).
+7. Entanglement entropy versus rotation angle.
 
 The parameter-based experiment demonstrates how entanglement increases as the rotation angle changes from \(0\) to \(\pi/4\).
 
@@ -121,7 +53,7 @@ Open the project notebook in Google Colab and execute the cells sequentially.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/arc03/Quantum_Entanglement.git
 cd your-repository-name
 ```
 
@@ -179,13 +111,6 @@ Quantum entanglement is an important resource in several quantum technologies, i
 2. Qiskit Documentation: https://docs.quantum.ibm.com/
 3. NumPy Documentation: https://numpy.org/doc/
 4. Matplotlib Documentation: https://matplotlib.org/
-
-## 👩‍💻 Project Information
-
-**Project:** Computational Analysis and Quantification of Bipartite Quantum Entanglement  
-**Domain:** Quantum Information and Quantum Computing  
-**Level:** M.Tech – Quantum Technology  
-**Institution:** Jaypee Institute of Information Technology (JIIT), Noida
 
 ---
 
