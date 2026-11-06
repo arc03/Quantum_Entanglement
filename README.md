@@ -1,0 +1,2 @@
+# Quantum_Entanglement
+Computational_Analysis_and_Quantification_of_Bipartite_Quantum_Entanglement_Using_Schmidt_Decomposition_and_Entanglement_Entropy.
