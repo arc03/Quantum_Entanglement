@@ -54,7 +54,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/arc03/Quantum_Entanglement.git
-cd your-repository-name
+cd Quantum_Entanglement
 ```
 
 Install the required libraries:
